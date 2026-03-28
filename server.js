@@ -65,6 +65,13 @@ const CTA_MESSAGES = {
   urgent: 'If you are experiencing this now, please contact DentalCare immediately for urgent guidance and scheduling.',
   admin: 'If you would like help with scheduling, insurance, or next steps, please contact DentalCare directly.'
 };
+const GRATITUDE_PATTERNS = [
+  /^thanks!?$/i,
+  /^thank you!?$/i,
+  /^thank you so much!?$/i,
+  /^appreciate it!?$/i,
+  /^thanks, appreciate it!?$/i
+];
 
 function getOllamaHeaders() {
   const headers = { 'Content-Type': 'application/json' };
@@ -87,6 +94,10 @@ function loadKnowledgeBase() {
 
 function normalizeTerm(term) {
   return TERM_NORMALIZATIONS[term] || term;
+}
+
+function isGratitudeMessage(query) {
+  return GRATITUDE_PATTERNS.some((pattern) => pattern.test(query.trim()));
 }
 
 function extractQueryTerms(query) {
@@ -149,6 +160,14 @@ app.post('/api/qa', async (req, res) => {
   const question = (req.body.question || '').trim();
   if (!question) {
     return res.status(400).json({ error: 'Question is required.' });
+  }
+
+  if (isGratitudeMessage(question)) {
+    return res.json({
+      question,
+      context: '',
+      answer: 'You are welcome. If you have another question about DentalCare services, appointments, or dental guidance, I am happy to help.'
+    });
   }
 
   const docs = loadKnowledgeBase();
