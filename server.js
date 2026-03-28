@@ -21,6 +21,31 @@ const STOPWORDS = new Set([
   'how', 'i', 'if', 'in', 'is', 'it', 'me', 'my', 'of', 'on', 'or', 'our', 'the',
   'to', 'us', 'we', 'what', 'when', 'where', 'who', 'why', 'with', 'you', 'your'
 ]);
+const TERM_NORMALIZATIONS = {
+  adress: 'address',
+  addres: 'address',
+  locate: 'location',
+  located: 'location',
+  location: 'address',
+  locatedat: 'address',
+  directions: 'address',
+  kid: 'children',
+  kids: 'children',
+  child: 'children',
+  booking: 'book',
+  booked: 'book',
+  appointment: 'appointments',
+  appointments: 'appointments',
+  emergency: 'urgent',
+  emergencies: 'urgent',
+  hours: 'hours',
+  open: 'hours',
+  payment: 'insurance',
+  payments: 'insurance',
+  cost: 'pricing',
+  price: 'pricing',
+  prices: 'pricing'
+};
 const OUT_OF_SCOPE_RESPONSE = 'I can only answer questions that are directly covered in the DentalCare knowledge base. Please ask about DentalCare services, policies, appointments, hours, insurance, or the dental guidance included on this site.';
 
 function getOllamaHeaders() {
@@ -42,10 +67,15 @@ function loadKnowledgeBase() {
   }
 }
 
+function normalizeTerm(term) {
+  return TERM_NORMALIZATIONS[term] || term;
+}
+
 function extractQueryTerms(query) {
   return query
     .toLowerCase()
     .split(/[^a-z0-9]+/)
+    .map((term) => normalizeTerm(term))
     .filter((term) => term.length > 2 && !STOPWORDS.has(term));
 }
 
@@ -54,7 +84,8 @@ function rankDocs(query, docs) {
   return docs
     .map((doc) => {
       const text = `${doc.title} ${doc.content}`.toLowerCase();
-      const score = qterms.reduce((sum, t) => sum + (text.includes(t) ? 1 : 0), 0);
+      const uniqueTerms = [...new Set(qterms)];
+      const score = uniqueTerms.reduce((sum, term) => sum + (text.includes(term) ? 1 : 0), 0);
       return { ...doc, score };
     })
     .sort((a, b) => b.score - a.score);
