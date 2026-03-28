@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dr. James Rivera portrait</title>
+  <desc id="desc">Illustrated portrait of a male pediatric dental doctor in blue scrubs and a white coat.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5fbff"/>
+      <stop offset="100%" stop-color="#dcefff"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" rx="34" fill="url(#bg)"/>
+  <circle cx="112" cy="106" r="48" fill="#fff1de"/>
+  <circle cx="240" cy="196" r="84" fill="#ddb18c"/>
+  <path d="M154 183c20-58 62-93 104-93 45 0 85 28 96 85-33 17-82 24-146 24-20 0-38-2-54-16Z" fill="#24303a"/>
+  <rect x="132" y="280" width="216" height="232" rx="46" fill="#ffffff"/>
+  <rect x="182" y="332" width="116" height="145" rx="28" fill="#7fc8f5"/>
+  <rect x="206" y="282" width="68" height="96" rx="24" fill="#ddb18c"/>
+  <path d="M171 524c12-74 46-118 69-118 24 0 57 44 69 118" fill="#ffffff"/>
+  <path d="M240 228c27 0 50-13 65-31-5 58-31 94-65 94s-60-36-65-94c15 18 38 31 65 31Z" fill="#d6a37f"/>
+  <path d="M198 353h84" stroke="#0d78c8" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="198" cy="402" r="10" fill="#0d78c8"/>
+  <circle cx="282" cy="402" r="10" fill="#0d78c8"/>
+</svg>

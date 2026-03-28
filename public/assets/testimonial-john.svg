@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">John D. avatar</title>
+  <rect width="120" height="120" rx="60" fill="#E3F2FD" />
+  <circle cx="60" cy="44" r="23" fill="#E8BD96" />
+  <path d="M34 104c4-20 18-33 26-33s22 13 26 33" fill="#42A5F5" />
+  <path d="M39 38c5-13 14-20 26-20 11 0 20 6 26 20-7 3-17 4-31 4-8 0-15-1-21-4Z" fill="#4E342E" />
+</svg>

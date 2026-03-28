@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dr. Amelia Hart portrait</title>
+  <desc id="desc">Illustrated portrait of a female dental doctor in a white coat.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef7ff"/>
+      <stop offset="100%" stop-color="#d3ebfb"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" rx="34" fill="url(#bg)"/>
+  <circle cx="358" cy="128" r="56" fill="#ffffff" opacity=".5"/>
+  <circle cx="240" cy="198" r="88" fill="#f0c6a7"/>
+  <path d="M150 188c18-64 68-104 118-104 44 0 88 27 103 83-47 19-113 27-189 21-13 0-24 0-32 0Z" fill="#533226"/>
+  <rect x="134" y="282" width="212" height="230" rx="44" fill="#ffffff"/>
+  <rect x="208" y="286" width="64" height="98" rx="22" fill="#f0c6a7"/>
+  <path d="M169 335c23 28 49 42 77 42s54-14 77-42v151H169Z" fill="#f8fbff"/>
+  <path d="M162 519c10-72 48-118 78-118s68 46 78 118" fill="#ffffff"/>
+  <path d="M236 372 210 404l30 39 29-39Z" fill="#0d78c8"/>
+  <rect x="154" y="316" width="14" height="167" rx="7" fill="#ffffff"/>
+  <rect x="312" y="316" width="14" height="167" rx="7" fill="#ffffff"/>
+  <path d="M240 228c26 0 49-12 64-30-7 52-34 87-64 87s-57-35-64-87c15 18 38 30 64 30Z" fill="#ebb892"/>
+</svg>

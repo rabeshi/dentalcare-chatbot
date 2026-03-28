@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dr. Priya Shah portrait</title>
+  <desc id="desc">Illustrated portrait of a female dental doctor with a white coat and teal top.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#d9f1ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" rx="34" fill="url(#bg)"/>
+  <circle cx="360" cy="120" r="62" fill="#ffffff" opacity=".5"/>
+  <circle cx="240" cy="202" r="86" fill="#d7a27d"/>
+  <path d="M155 205c8-78 59-124 114-124 60 0 111 45 117 118-43 7-92 10-147 10-32 0-60-1-84-4Z" fill="#2c2226"/>
+  <rect x="130" y="286" width="220" height="228" rx="46" fill="#ffffff"/>
+  <rect x="174" y="338" width="132" height="144" rx="26" fill="#61c3bb"/>
+  <rect x="204" y="290" width="72" height="96" rx="24" fill="#d7a27d"/>
+  <path d="M169 524c12-74 47-118 71-118 23 0 58 44 71 118" fill="#ffffff"/>
+  <path d="M240 233c27 0 50-13 67-33-7 59-34 96-67 96s-60-37-67-96c17 20 40 33 67 33Z" fill="#ce956e"/>
+  <path d="M225 356c8 8 16 12 25 12 8 0 16-4 23-12" stroke="#ffffff" stroke-width="10" stroke-linecap="round" fill="none"/>
+</svg>

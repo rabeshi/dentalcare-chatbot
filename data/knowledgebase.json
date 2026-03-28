@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Clinic Overview",
+    "content": "DentalCare is a trusted family dentistry practice dedicated to providing compassionate, high-quality dental care for children, teens, adults, and seniors. Our child-friendly environment ensures that every family member feels comfortable and cared for. We offer a full range of services from pediatric dentistry to cosmetic treatments, all delivered by experienced professionals using modern equipment."
+  },
+  {
+    "id": "2",
+    "title": "Services and Pricing Guide",
+    "content": "Our services include Pediatric Dentistry (starting at $150 for checkups), Routine Checkups and Cleanings ($120), Fillings and Cavity Care ($150-$300), Orthodontic Consultations ($100), Preventive Care (fluoride $50, sealants $80), Cosmetic Dentistry (teeth whitening $200), and Emergency Dental Care (varies, call for urgent needs). We accept most insurance plans and offer flexible payment options."
+  },
+  {
+    "id": "3",
+    "title": "Pediatric Dentistry FAQ",
+    "content": "We specialize in children's dentistry. First visits are recommended by age 1. We make kids feel comfortable with gentle care, fun distractions, and positive reinforcement. Services include cavity prevention, fluoride treatments, sealants, and education for parents. Children should see a dentist every 6 months."
+  },
+  {
+    "id": "4",
+    "title": "Office Hours and Contact Info",
+    "content": "DentalCare is located at 123 Smile Street, Happyville, CA 90210. Phone: (555) 123-4567, Email: info@dentalcare.com. Hours: Monday-Friday 8am-6pm, Saturday 9am-3pm, Sunday closed. We offer flexible scheduling including evenings and weekends for working families."
+  },
+  {
+    "id": "5",
+    "title": "Insurance and Payment Policies",
+    "content": "We accept most major dental insurance plans including Delta, Aetna, and Cigna. For uninsured patients, we offer affordable payment plans and financing options. We also accept cash, credit cards, and HSA/FSA payments. Call us to verify your coverage."
+  },
+  {
+    "id": "6",
+    "title": "Appointment and Cancellation Policy",
+    "content": "Book appointments online or by phone. We require 24-hour notice for cancellations to avoid fees. Same-day emergencies are accommodated when possible. New patients should arrive 15 minutes early for paperwork."
+  },
+  {
+    "id": "7",
+    "title": "Post-Treatment Care Instructions",
+    "content": "After dental procedures, follow our care instructions carefully. For fillings, avoid hard foods for 24 hours. Maintain good oral hygiene with brushing twice daily and flossing. Contact us immediately if you experience unusual pain or swelling."
+  },
+  {
+    "id": "8",
+    "title": "Emergency Dental Advice",
+    "content": "For dental emergencies like severe pain, knocked-out teeth, or bleeding, call us immediately at (555) 123-4567. We provide urgent care and can often see patients the same day. Remember, Dental AI is for informational support only and not a substitute for professional dental advice."
+  }
+]

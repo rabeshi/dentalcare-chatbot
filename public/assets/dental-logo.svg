@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">DentalCare logo</title>
+  <desc id="desc">Blue circular dental logo with a tooth shape.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E3F2FD" />
+      <stop offset="100%" stop-color="#90CAF9" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="url(#bg)" />
+  <path d="M60 24c16 0 28 10 28 25 0 6-2 11-5 16-4 7-6 14-8 24-2 9-7 13-15 13s-13-4-15-13c-2-10-4-17-8-24-3-5-5-10-5-16 0-15 12-25 28-25Z" fill="#1565C0"/>
+  <path d="M60 33c11 0 19 7 19 18 0 5-2 8-4 12-3 5-5 12-6 18-1 5-4 8-9 8s-8-3-9-8c-1-6-3-13-6-18-2-4-4-7-4-12 0-11 8-18 19-18Z" fill="#FFFFFF"/>
+</svg>
