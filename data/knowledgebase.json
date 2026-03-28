@@ -38,5 +38,20 @@
     "id": "8",
     "title": "Emergency Dental Advice",
     "content": "For dental emergencies like severe pain, knocked-out teeth, or bleeding, call us immediately at (555) 123-4567. We provide urgent care and can often see patients the same day. Remember, Dental AI is for informational support only and not a substitute for professional dental advice."
+  },
+  {
+    "id": "9",
+    "title": "Dental Term: Cavities",
+    "content": "A cavity is a damaged area in a tooth caused by tooth decay. Cavities can lead to pain, sensitivity, and worsening damage if they are not treated. DentalCare treats cavities with fillings and encourages regular checkups, brushing, flossing, fluoride, and preventive care to reduce the risk of tooth decay."
+  },
+  {
+    "id": "10",
+    "title": "Dental Term: Preventing Tooth Decay",
+    "content": "To help prevent tooth decay, brush twice daily, floss every day, limit sugary snacks and drinks, attend routine dental checkups, and ask about fluoride treatments or sealants when appropriate. Preventive care is especially important for children and teens."
+  },
+  {
+    "id": "11",
+    "title": "Quick Answers: Hours, Location, and Booking",
+    "content": "DentalCare is located at 123 Smile Street, Happyville, CA 90210. Office hours are Monday through Friday from 8:00 AM to 6:00 PM, Saturday from 9:00 AM to 3:00 PM, and Sunday closed. Patients can book a visit online or by phone, and new patients should arrive 15 minutes early for paperwork."
   }
 ]
