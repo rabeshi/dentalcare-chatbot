@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 const KB_PATH = path.join(__dirname, 'data', 'knowledgebase.json');
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'mistral:latest';
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'ministral-3:3b';
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || (process.env.OLLAMA_API_KEY ? 'https://ollama.com/api' : 'http://127.0.0.1:11434/api');
 
 function getOllamaHeaders() {

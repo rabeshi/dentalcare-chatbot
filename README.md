@@ -9,13 +9,13 @@ A family dentistry website with a chatbot that uses retrieval-augmented generati
 2. Start Ollama locally:
    - `ollama serve`
 3. Make sure your model is available:
-   - `ollama pull mistral:latest`
+   - `ollama pull ministral-3:3b`
 4. Start the app:
    - `npm start`
 5. Open `http://localhost:3000`
 
 By default, the app uses:
-- `OLLAMA_MODEL=mistral:latest`
+- `OLLAMA_MODEL=ministral-3:3b`
 - `OLLAMA_BASE_URL=http://127.0.0.1:11434/api`
 
 ## Ollama Cloud
