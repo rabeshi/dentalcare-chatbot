@@ -14,6 +14,18 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 const KB_PATH = path.join(__dirname, 'data', 'knowledgebase.json');
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'mistral:latest';
+const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || (process.env.OLLAMA_API_KEY ? 'https://ollama.com/api' : 'http://127.0.0.1:11434/api');
+
+function getOllamaHeaders() {
+  const headers = { 'Content-Type': 'application/json' };
+
+  if (process.env.OLLAMA_API_KEY) {
+    headers.Authorization = `Bearer ${process.env.OLLAMA_API_KEY}`;
+  }
+
+  return headers;
+}
 
 function loadKnowledgeBase() {
   try {
@@ -56,11 +68,11 @@ Question: ${question}
 Answer:`;
 
   try {
-    const resp = await fetch('http://127.0.0.1:11434/api/generate', {
+    const resp = await fetch(`${OLLAMA_BASE_URL}/generate`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getOllamaHeaders(),
       body: JSON.stringify({
-        model: 'mistral:latest',
+        model: OLLAMA_MODEL,
         prompt,
         max_tokens: 300,
         temperature: 0.05,
@@ -82,5 +94,5 @@ Answer:`;
 });
 
 app.listen(3000, () => {
-  console.log('Dentistry RAG app running at http://localhost:3000');
+  console.log(`Dentistry RAG app running at http://localhost:3000 using ${OLLAMA_MODEL} via ${OLLAMA_BASE_URL}`);
 });
