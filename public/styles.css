@@ -1005,6 +1005,33 @@ section.animate-in .contact-form-card {
   gap: 0.5rem;
 }
 
+.message-text {
+  color: inherit;
+}
+
+.message-text p {
+  margin: 0;
+  color: inherit;
+}
+
+.message-text p + p {
+  margin-top: 0.65rem;
+}
+
+.message-text ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.message-text li + li {
+  margin-top: 0.35rem;
+}
+
+.message-text strong,
+.message-text em {
+  color: inherit;
+}
+
 .message-icon {
   width: 1.25rem;
   height: 1.35rem;

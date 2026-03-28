@@ -16,6 +16,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 const KB_PATH = path.join(__dirname, 'data', 'knowledgebase.json');
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'ministral-3:3b';
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || (process.env.OLLAMA_API_KEY ? 'https://ollama.com/api' : 'http://127.0.0.1:11434/api');
+const STOPWORDS = new Set([
+  'a', 'an', 'and', 'are', 'at', 'be', 'by', 'can', 'do', 'for', 'from', 'get', 'has',
+  'how', 'i', 'if', 'in', 'is', 'it', 'me', 'my', 'of', 'on', 'or', 'our', 'the',
+  'to', 'us', 'we', 'what', 'when', 'where', 'who', 'why', 'with', 'you', 'your'
+]);
+const OUT_OF_SCOPE_RESPONSE = 'I can only answer questions that are directly covered in the DentalCare knowledge base. Please ask about DentalCare services, policies, appointments, hours, insurance, or the dental guidance included on this site.';
 
 function getOllamaHeaders() {
   const headers = { 'Content-Type': 'application/json' };
@@ -36,8 +42,15 @@ function loadKnowledgeBase() {
   }
 }
 
+function extractQueryTerms(query) {
+  return query
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((term) => term.length > 2 && !STOPWORDS.has(term));
+}
+
 function rankDocs(query, docs) {
-  const qterms = query.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+  const qterms = extractQueryTerms(query);
   return docs
     .map((doc) => {
       const text = `${doc.title} ${doc.content}`.toLowerCase();
@@ -54,11 +67,22 @@ app.post('/api/qa', async (req, res) => {
   }
 
   const docs = loadKnowledgeBase();
+  const qterms = extractQueryTerms(question);
+
+  if (qterms.length === 0) {
+    return res.json({ question, context: '', answer: OUT_OF_SCOPE_RESPONSE });
+  }
+
   const ranked = rankDocs(question, docs);
   const topDocs = ranked.slice(0, 3).filter((d) => d.score > 0);
-  const context = topDocs.map((doc, i) => `${i + 1}. ${doc.title}: ${doc.content}`).join('\n\n') || 'No direct knowledge found in local data.';
 
-  const prompt = `You are Dental AI, the helpful chatbot for DentalCare clinic. Use this context to answer user questions about our services, policies, and dental care. Provide caring, reassuring, and professional responses. If the question is not related to DentalCare or dental care, politely decline to answer and suggest contacting the clinic for dental-related inquiries.
+  if (topDocs.length === 0) {
+    return res.json({ question, context: '', answer: OUT_OF_SCOPE_RESPONSE });
+  }
+
+  const context = topDocs.map((doc, i) => `${i + 1}. ${doc.title}: ${doc.content}`).join('\n\n');
+
+  const prompt = `You are Dental AI, the helpful chatbot for DentalCare clinic. Answer only with facts that are explicitly supported by the provided context. Do not use outside knowledge, training data, or assumptions. If the context does not fully answer the question, say that you do not have that information in the DentalCare knowledge base and invite the user to contact the clinic directly. Keep responses concise, caring, and professional.
 
 Context:
 ${context}

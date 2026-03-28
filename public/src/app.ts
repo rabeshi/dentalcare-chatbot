@@ -89,6 +89,55 @@ function createToothIcon(className: string): HTMLSpanElement {
   return iconSpan;
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function formatInlineMarkdown(text: string): string {
+  return escapeHtml(text)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>');
+}
+
+function formatBotMessage(text: string): string {
+  const lines = text
+    .split(/\r?\n/)
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  if (lines.length === 0) {
+    return '<p></p>';
+  }
+
+  const parts: string[] = [];
+  let listItems: string[] = [];
+
+  const flushList = (): void => {
+    if (listItems.length > 0) {
+      parts.push(`<ul>${listItems.join('')}</ul>`);
+      listItems = [];
+    }
+  };
+
+  lines.forEach(line => {
+    if (/^[-*]\s+/.test(line)) {
+      listItems.push(`<li>${formatInlineMarkdown(line.replace(/^[-*]\s+/, ''))}</li>`);
+      return;
+    }
+
+    flushList();
+    parts.push(`<p>${formatInlineMarkdown(line)}</p>`);
+  });
+
+  flushList();
+  return parts.join('');
+}
+
 async function sendMessage(chatInput: HTMLInputElement, chatMessages: HTMLDivElement): Promise<void> {
   const message = chatInput.value.trim();
   if (!message) return;
@@ -148,9 +197,16 @@ function addMessage(text: string, sender: 'user' | 'bot', chatMessages: HTMLDivE
     contentDiv.appendChild(createToothIcon('message-icon'));
   }
 
-  const textP = document.createElement('p');
-  textP.textContent = text;
-  contentDiv.appendChild(textP);
+  if (sender === 'bot') {
+    const formattedText = document.createElement('div');
+    formattedText.className = 'message-text';
+    formattedText.innerHTML = formatBotMessage(text);
+    contentDiv.appendChild(formattedText);
+  } else {
+    const textP = document.createElement('p');
+    textP.textContent = text;
+    contentDiv.appendChild(textP);
+  }
 
   messageDiv.appendChild(contentDiv);
   chatMessages.appendChild(messageDiv);
