@@ -60,6 +60,11 @@ const TERM_NORMALIZATIONS = {
   prices: 'pricing'
 };
 const OUT_OF_SCOPE_RESPONSE = 'I can only answer questions that are directly covered in the DentalCare knowledge base. Please ask about DentalCare services, policies, appointments, hours, insurance, or the dental guidance included on this site.';
+const CTA_MESSAGES = {
+  book: 'If this applies to you, please book an appointment with DentalCare so a dentist can examine you in person.',
+  urgent: 'If you are experiencing this now, please contact DentalCare immediately for urgent guidance and scheduling.',
+  admin: 'If you would like help with scheduling, insurance, or next steps, please contact DentalCare directly.'
+};
 
 function getOllamaHeaders() {
   const headers = { 'Content-Type': 'application/json' };
@@ -96,12 +101,48 @@ function rankDocs(query, docs) {
   const qterms = extractQueryTerms(query);
   return docs
     .map((doc) => {
-      const text = `${doc.title} ${doc.content}`.toLowerCase();
+      const keywords = Array.isArray(doc.keywords) ? doc.keywords.join(' ') : '';
+      const text = `${doc.title} ${doc.content} ${keywords}`.toLowerCase();
       const uniqueTerms = [...new Set(qterms)];
       const score = uniqueTerms.reduce((sum, term) => sum + (text.includes(term) ? 1 : 0), 0);
       return { ...doc, score };
     })
     .sort((a, b) => b.score - a.score);
+}
+
+function chooseCtaType(topDocs) {
+  if (topDocs.some((doc) => doc.ctaType === 'urgent')) {
+    return 'urgent';
+  }
+
+  if (topDocs.some((doc) => doc.ctaType === 'book')) {
+    return 'book';
+  }
+
+  if (topDocs.some((doc) => doc.ctaType === 'admin')) {
+    return 'admin';
+  }
+
+  return null;
+}
+
+function appendCta(answer, ctaType) {
+  if (!ctaType) {
+    return answer;
+  }
+
+  const normalizedAnswer = answer.toLowerCase();
+  const ctaMessage = CTA_MESSAGES[ctaType];
+
+  if (
+    normalizedAnswer.includes('book an appointment') ||
+    normalizedAnswer.includes('contact dentalcare immediately') ||
+    normalizedAnswer.includes('contact the clinic directly')
+  ) {
+    return answer;
+  }
+
+  return `${answer}\n\n${ctaMessage}`;
 }
 
 app.post('/api/qa', async (req, res) => {
@@ -125,6 +166,7 @@ app.post('/api/qa', async (req, res) => {
   }
 
   const context = topDocs.map((doc, i) => `${i + 1}. ${doc.title}: ${doc.content}`).join('\n\n');
+  const ctaType = chooseCtaType(topDocs);
 
   const prompt = `You are Dental AI, the helpful chatbot for DentalCare clinic. Answer only with facts that are explicitly supported by the provided context. Do not use outside knowledge, training data, or assumptions. If the context does not fully answer the question, say that you do not have that information in the DentalCare knowledge base and invite the user to contact the clinic directly. Keep responses concise, caring, and professional.
 
@@ -154,7 +196,7 @@ Answer:`;
     }
 
     const json = await resp.json();
-    const answer = json.response?.trim() || 'No answer from model.';
+    const answer = appendCta(json.response?.trim() || 'No answer from model.', ctaType);
     return res.json({ question, context, answer });
   } catch (error) {
     return res.status(500).json({ error: error.message });

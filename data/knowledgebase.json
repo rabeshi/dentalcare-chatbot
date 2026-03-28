@@ -2,56 +2,127 @@
   {
     "id": "1",
     "title": "Clinic Overview",
-    "content": "DentalCare is a trusted family dentistry practice dedicated to providing compassionate, high-quality dental care for children, teens, adults, and seniors. Our child-friendly environment ensures that every family member feels comfortable and cared for. We offer a full range of services from pediatric dentistry to cosmetic treatments, all delivered by experienced professionals using modern equipment."
+    "content": "DentalCare is a trusted family dentistry practice dedicated to providing compassionate, high-quality dental care for children, teens, adults, and seniors. Our child-friendly environment ensures that every family member feels comfortable and cared for. We offer a full range of services from pediatric dentistry to cosmetic treatments, all delivered by experienced professionals using modern equipment.",
+    "keywords": ["dentalcare", "family dentistry", "clinic overview"],
+    "ctaType": "book"
   },
   {
     "id": "2",
     "title": "Services and Pricing Guide",
-    "content": "Our services include Pediatric Dentistry (starting at $150 for checkups), Routine Checkups and Cleanings ($120), Fillings and Cavity Care ($150-$300), Orthodontic Consultations ($100), Preventive Care (fluoride $50, sealants $80), Cosmetic Dentistry (teeth whitening $200), and Emergency Dental Care (varies, call for urgent needs). We accept most insurance plans and offer flexible payment options."
+    "content": "Our services include Pediatric Dentistry (starting at $150 for checkups), Routine Checkups and Cleanings ($120), Fillings and Cavity Care ($150-$300), Orthodontic Consultations ($100), Preventive Care (fluoride $50, sealants $80), Cosmetic Dentistry (teeth whitening $200), and Emergency Dental Care (varies, call for urgent needs). We accept most insurance plans and offer flexible payment options.",
+    "keywords": ["services", "pricing", "checkup", "cleaning", "fillings", "orthodontic", "whitening"],
+    "ctaType": "book"
   },
   {
     "id": "3",
     "title": "Pediatric Dentistry FAQ",
-    "content": "We specialize in children's dentistry. First visits are recommended by age 1. We make kids feel comfortable with gentle care, fun distractions, and positive reinforcement. Services include cavity prevention, fluoride treatments, sealants, and education for parents. Children should see a dentist every 6 months."
+    "content": "We specialize in children's dentistry. First visits are recommended by age 1. We make kids feel comfortable with gentle care, fun distractions, and positive reinforcement. Services include cavity prevention, fluoride treatments, sealants, and education for parents. Children should see a dentist every 6 months.",
+    "keywords": ["children", "kids", "child", "pediatric dentistry"],
+    "ctaType": "book"
   },
   {
     "id": "4",
     "title": "Office Hours and Contact Info",
-    "content": "DentalCare is located at 123 Smile Street, Happyville, CA 90210. Phone: (555) 123-4567, Email: info@dentalcare.com. Hours: Monday-Friday 8am-6pm, Saturday 9am-3pm, Sunday closed. We offer flexible scheduling including evenings and weekends for working families."
+    "content": "DentalCare is located at 123 Smile Street, Happyville, CA 90210. Phone: (555) 123-4567, Email: info@dentalcare.com. Hours: Monday-Friday 8am-6pm, Saturday 9am-3pm, Sunday closed. We offer flexible scheduling including evenings and weekends for working families.",
+    "keywords": ["hours", "open", "address", "location", "phone", "email"],
+    "ctaType": "admin"
   },
   {
     "id": "5",
     "title": "Insurance and Payment Policies",
-    "content": "We accept most major dental insurance plans including Delta, Aetna, and Cigna. For uninsured patients, we offer affordable payment plans and financing options. We also accept cash, credit cards, and HSA/FSA payments. Call us to verify your coverage."
+    "content": "We accept most major dental insurance plans including Delta, Aetna, and Cigna. For uninsured patients, we offer affordable payment plans and financing options. We also accept cash, credit cards, and HSA/FSA payments. Call us to verify your coverage.",
+    "keywords": ["insurance", "copay", "deductible", "coverage", "billing", "payment plan"],
+    "ctaType": "admin"
   },
   {
     "id": "6",
     "title": "Appointment and Cancellation Policy",
-    "content": "Book appointments online or by phone. We require 24-hour notice for cancellations to avoid fees. Same-day emergencies are accommodated when possible. New patients should arrive 15 minutes early for paperwork."
+    "content": "Book appointments online or by phone. We require 24-hour notice for cancellations to avoid fees. Same-day emergencies are accommodated when possible. New patients should arrive 15 minutes early for paperwork.",
+    "keywords": ["book appointment", "reschedule", "cancel appointment", "new patient", "check-up", "consultation"],
+    "ctaType": "admin"
   },
   {
     "id": "7",
     "title": "Post-Treatment Care Instructions",
-    "content": "After dental procedures, follow our care instructions carefully. For fillings, avoid hard foods for 24 hours. Maintain good oral hygiene with brushing twice daily and flossing. Contact us immediately if you experience unusual pain or swelling."
+    "content": "After dental procedures, follow our care instructions carefully. For fillings, avoid hard foods for 24 hours. Maintain good oral hygiene with brushing twice daily and flossing. Contact us immediately if you experience unusual pain or swelling.",
+    "keywords": ["post treatment", "aftercare", "filling", "pain", "swelling"],
+    "ctaType": "book"
   },
   {
     "id": "8",
     "title": "Emergency Dental Advice",
-    "content": "For dental emergencies like severe pain, knocked-out teeth, or bleeding, call us immediately at (555) 123-4567. We provide urgent care and can often see patients the same day. Remember, Dental AI is for informational support only and not a substitute for professional dental advice."
+    "content": "For dental emergencies like severe pain, knocked-out teeth, or bleeding, call us immediately at (555) 123-4567. We provide urgent care and can often see patients the same day. Remember, Dental AI is for informational support only and not a substitute for professional dental advice.",
+    "keywords": ["broken tooth", "knocked-out tooth", "cracked tooth", "lost filling", "lost crown", "dental trauma", "abscess emergency"],
+    "ctaType": "urgent"
   },
   {
     "id": "9",
     "title": "Dental Term: Cavities",
-    "content": "A cavity is a damaged area in a tooth caused by tooth decay. Cavities can lead to pain, sensitivity, and worsening damage if they are not treated. DentalCare treats cavities with fillings and encourages regular checkups, brushing, flossing, fluoride, and preventive care to reduce the risk of tooth decay."
+    "content": "A cavity is a damaged area in a tooth caused by tooth decay. Cavities can lead to pain, sensitivity, and worsening damage if they are not treated. DentalCare treats cavities with fillings and encourages regular checkups, brushing, flossing, fluoride, and preventive care to reduce the risk of tooth decay.",
+    "keywords": ["cavity", "cavities", "dental caries", "tooth decay"],
+    "ctaType": "book"
   },
   {
     "id": "10",
     "title": "Dental Term: Preventing Tooth Decay",
-    "content": "To help prevent tooth decay, brush twice daily, floss every day, limit sugary snacks and drinks, attend routine dental checkups, and ask about fluoride treatments or sealants when appropriate. Preventive care is especially important for children and teens."
+    "content": "To help prevent tooth decay, brush twice daily, floss every day, limit sugary snacks and drinks, attend routine dental checkups, and ask about fluoride treatments or sealants when appropriate. Preventive care is especially important for children and teens.",
+    "keywords": ["plaque", "tartar", "preventive care", "flossing", "brushing"],
+    "ctaType": "book"
   },
   {
     "id": "11",
     "title": "Quick Answers: Hours, Location, and Booking",
-    "content": "DentalCare is located at 123 Smile Street, Happyville, CA 90210. Office hours are Monday through Friday from 8:00 AM to 6:00 PM, Saturday from 9:00 AM to 3:00 PM, and Sunday closed. Patients can book a visit online or by phone, and new patients should arrive 15 minutes early for paperwork."
+    "content": "DentalCare is located at 123 Smile Street, Happyville, CA 90210. Office hours are Monday through Friday from 8:00 AM to 6:00 PM, Saturday from 9:00 AM to 3:00 PM, and Sunday closed. Patients can book a visit online or by phone, and new patients should arrive 15 minutes early for paperwork.",
+    "keywords": ["hours", "location", "address", "booking", "book visit"],
+    "ctaType": "admin"
+  },
+  {
+    "id": "12",
+    "title": "Basic Dental Anatomy Glossary",
+    "content": "Teeth are made of several parts. Enamel is the hard outer layer. Dentin is the layer under enamel. The pulp is the soft inner area with nerves and blood supply. The crown is the visible part of the tooth above the gums, while the root anchors the tooth below the gumline. Gums support the teeth, and the jaw supports the mouth and bite. Common tooth types include incisors, canines, premolars, molars, and wisdom teeth.",
+    "keywords": ["teeth", "gums", "enamel", "dentin", "pulp", "root", "crown", "jaw", "molars", "premolars", "incisors", "canines", "wisdom teeth"],
+    "ctaType": "book"
+  },
+  {
+    "id": "13",
+    "title": "Symptoms and Complaints Guide",
+    "content": "Common dental symptoms include toothache, bleeding gums, swollen gums, sensitive teeth, bad breath, loose tooth, jaw pain, dry mouth, mouth sores, and gum recession. These symptoms can have different causes and should be evaluated by a dentist if they persist, worsen, or cause concern.",
+    "keywords": ["toothache", "bleeding gums", "swollen gums", "sensitive teeth", "halitosis", "bad breath", "loose tooth", "jaw pain", "dry mouth", "mouth sores", "gum recession"],
+    "ctaType": "book"
+  },
+  {
+    "id": "14",
+    "title": "Conditions and Diseases Glossary",
+    "content": "Common dental conditions include gingivitis, periodontitis, tooth infection, dental abscess, plaque, tartar, bruxism, oral cancer concerns, and TMJ disorder. DentalCare can evaluate symptoms, explain treatment options, and recommend the right next step, but patients need an in-person dentist evaluation for diagnosis and treatment planning.",
+    "keywords": ["gingivitis", "periodontitis", "tooth infection", "abscess", "plaque", "tartar", "calculus", "bruxism", "oral cancer", "tmj disorder"],
+    "ctaType": "book"
+  },
+  {
+    "id": "15",
+    "title": "Dental Procedures Overview",
+    "content": "DentalCare offers or discusses procedures such as dental cleaning, filling, root canal treatment, tooth extraction, wisdom tooth removal, dental crown placement, dental bridge work, dentures, dental implants, veneers, teeth whitening, sealants, and deep cleaning such as scaling and root planing. A consultation helps determine which treatment is appropriate for a patient.",
+    "keywords": ["dental cleaning", "filling", "root canal", "tooth extraction", "wisdom tooth removal", "dental crown", "dental bridge", "dentures", "dental implants", "veneers", "teeth whitening", "sealants", "deep cleaning", "scaling", "root planing"],
+    "ctaType": "book"
+  },
+  {
+    "id": "16",
+    "title": "Emergency Terms and Urgent Care",
+    "content": "Urgent dental issues include a broken tooth, knocked-out tooth, severe tooth pain, bleeding after extraction, dental trauma, cracked tooth, lost filling, lost crown, or a possible abscess emergency. These concerns should be treated promptly. Patients should call DentalCare immediately so the team can advise on urgent next steps and same-day availability when possible.",
+    "keywords": ["broken tooth", "knocked-out tooth", "severe tooth pain", "bleeding after extraction", "dental trauma", "cracked tooth", "lost filling", "lost crown", "abscess emergency"],
+    "ctaType": "urgent"
+  },
+  {
+    "id": "17",
+    "title": "Insurance and Admin Terms Glossary",
+    "content": "Administrative topics patients often ask about include dental insurance, copay, deductible, coverage, in-network or out-of-network status, claims, pre-authorization, billing, payment plans, rescheduling, cancellations, walk-ins, consultations, follow-up visits, referrals, and new-patient visits. DentalCare can help patients understand these topics and confirm details directly with the office.",
+    "keywords": ["dental insurance", "copay", "deductible", "coverage", "in-network", "out-of-network", "claim", "pre-authorization", "billing", "payment plan", "reschedule", "cancel appointment", "walk-in", "consultation", "follow-up", "referral", "new patient"],
+    "ctaType": "admin"
+  },
+  {
+    "id": "18",
+    "title": "Dental Tools and Comfort Options",
+    "content": "Patients sometimes ask about dental tools or comfort options such as X-rays, a dental drill, ultrasonic scaler, mouth mirror, suction, anesthesia, and nitrous oxide. DentalCare can explain whether these tools or comfort measures are relevant during a consultation or treatment visit.",
+    "keywords": ["x-ray", "dental drill", "ultrasonic scaler", "mouth mirror", "suction", "anesthesia", "nitrous oxide", "laughing gas"],
+    "ctaType": "book"
   }
 ]
